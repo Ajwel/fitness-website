@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShiftFit Gym Planner</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="ShiftFit home">
+        <span class="brand-mark">SF</span>
+        <span>ShiftFit</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#planner">Planner</a>
+        <a href="#shifts">Shifts</a>
+        <a href="#nutrition">Nutrition</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <img src="assets/hero-gym.png" alt="People training in a bright modern gym" />
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Gym planning for real schedules</p>
+          <h1 id="hero-title">Build your week around the workout shift that fits.</h1>
+          <p>
+            Choose your goal, pick a time block, and get a practical training split with
+            focused nutrition tips.
+          </p>
+          <a class="primary-action" href="#planner">Plan my week</a>
+        </div>
+      </section>
+
+      <section class="stats-band" aria-label="Program highlights">
+        <div>
+          <strong>3</strong>
+          <span>training goals</span>
+        </div>
+        <div>
+          <strong>4</strong>
+          <span>workout shifts</span>
+        </div>
+        <div>
+          <strong>7</strong>
+          <span>day planner</span>
+        </div>
+      </section>
+
+      <section class="section planner-section" id="planner" aria-labelledby="planner-title">
+        <div class="section-heading">
+          <p class="eyebrow">Interactive planner</p>
+          <h2 id="planner-title">Create a gym plan</h2>
+        </div>
+
+        <div class="planner-shell">
+          <form class="planner-controls" id="plannerForm">
+            <label>
+              Training goal
+              <select id="goalSelect">
+                <option value="strength">Build strength</option>
+                <option value="fatloss">Lose fat</option>
+                <option value="endurance">Improve endurance</option>
+              </select>
+            </label>
+
+            <label>
+              Workout shift
+              <select id="shiftSelect">
+                <option value="morning">Morning boost</option>
+                <option value="lunch">Lunch break</option>
+                <option value="evening">Evening power</option>
+                <option value="night">Night reset</option>
+              </select>
+            </label>
+
+            <label>
+              Days per week
+              <input id="daysRange" type="range" min="3" max="6" value="5" />
+              <span class="range-value"><span id="daysValue">5</span> days</span>
+            </label>
+
+            <button type="submit">Update plan</button>
+          </form>
+
+          <div class="planner-output" aria-live="polite">
+            <div class="output-topline">
+              <div>
+                <p class="eyebrow">This week</p>
+                <h3 id="planName">Strength - Morning boost</h3>
+              </div>
+              <span id="planTime">6:00 AM - 7:00 AM</span>
+            </div>
+            <div class="week-grid" id="weekGrid"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section shift-section" id="shifts" aria-labelledby="shift-title">
+        <div class="section-heading">
+          <p class="eyebrow">Workout shifts</p>
+          <h2 id="shift-title">Pick the training window that matches your energy</h2>
+        </div>
+        <div class="shift-grid">
+          <article>
+            <span>6:00 AM</span>
+            <h3>Morning boost</h3>
+            <p>Fast warmups, compound lifts, and protein-forward breakfast timing.</p>
+          </article>
+          <article>
+            <span>12:30 PM</span>
+            <h3>Lunch break</h3>
+            <p>Efficient circuits, short rests, and meals that do not slow the afternoon.</p>
+          </article>
+          <article>
+            <span>6:30 PM</span>
+            <h3>Evening power</h3>
+            <p>Heavier sessions, longer mobility, and a recovery-focused dinner.</p>
+          </article>
+          <article>
+            <span>9:00 PM</span>
+            <h3>Night reset</h3>
+            <p>Low-impact strength, stretching, and calm hydration before sleep.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section nutrition-section" id="nutrition" aria-labelledby="nutrition-title">
+        <div class="section-heading">
+          <p class="eyebrow">Nutrition tips</p>
+          <h2 id="nutrition-title">Eat to support the plan</h2>
+        </div>
+        <div class="nutrition-layout">
+          <article class="nutrition-feature">
+            <h3 id="nutritionFocus">Strength fuel</h3>
+            <p id="nutritionCopy">
+              Build each meal around protein, colorful carbs, and a steady water target.
+            </p>
+          </article>
+          <div class="tip-list">
+            <article>
+              <h3>Pre-workout</h3>
+              <p>Pair easy carbs with water 30 to 90 minutes before training.</p>
+            </article>
+            <article>
+              <h3>Post-workout</h3>
+              <p>Choose protein plus carbs within a few hours to support recovery.</p>
+            </article>
+            <article>
+              <h3>Daily rhythm</h3>
+              <p>Keep meals repeatable on busy days so your plan survives real life.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>ShiftFit plans are general fitness guidance. Adjust intensity for your body and goals.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
